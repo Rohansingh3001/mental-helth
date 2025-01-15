@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mansiksukh - Dashboard</title>
+  <link rel="stylesheet" href="home.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Mansiksukh</div>
+    <ul class="nav-links">
+      <li><a href="#dashboard">Dashboard</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="session.html">Sessions</a></li>
+      <li><a href="profile.html">Profile</a></li>
+    </ul>
+    <button class="btn-logout" onclick="logout()">Logout</button>
+  </nav>
+
+  <!-- Dashboard Section -->
+  <section class="dashboard" id="dashboard">
+    <h1>Welcome Back, [User's Name]</h1>
+    <p>Your mental health journey starts here. Access your resources and book a session today.</p>
+    <button class="btn-primary" onclick="window.location.href='session.html'">Book a Session</button>
+  </section>
+
+  <!-- Resources Section -->
+  <section class="resources" id="resources">
+    <h2>Your Personalized Resources</h2>
+    <div class="resources-container">
+      <div class="card">
+        <i class="fas fa-book"></i>
+        <h3>Read Articles</h3>
+      </div>
+      <div class="card">
+        <i class="fas fa-microphone"></i>
+        <h3>Listen to Podcasts</h3>
+      </div>
+      <div class="card">
+        <i class="fas fa-video"></i>
+        <h3>Watch Videos</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Floating Chatbot Button -->
+<div class="chatbot-button" onclick="openChat()">
+  <i class="fas fa-robot"></i>
+</div>
+
+<!-- Chat Interface -->
+<div class="chat-window" id="chat-window">
+  <div class="chat-header">
+    <h3>Dost - Your Mental Health Companion</h3>
+    <button onclick="closeChat()">X</button>
+  </div>
+  <div class="chat-body" id="chat-body">
+    <div class="bot-message">Hello! I'm Dost. How can I help you today?</div>
+  </div>
+  <div class="chat-footer">
+    <input type="text" id="user-input" placeholder="Type your message..." onkeypress="sendMessage(event)">
+    <button onclick="sendUserMessage()">Send</button>
+  </div>
+</div>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Mansiksukh. All rights reserved.</p>
+  </footer>
+
+  <script src="home.js"></script>
+
+</body>
+</html>

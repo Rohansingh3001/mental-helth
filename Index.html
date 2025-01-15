@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mansiksukh - Mental Health Support</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+ <!-- Navbar -->
+<nav class="navbar">
+    <div class="logo">Mansiksukh</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#resources">Resources</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+  
+
+  <!-- Hero Section -->
+  <header class="hero" id="home">
+    <div class="hero-content">
+      <h1>You're Not Alone in This Journey</h1>
+      <p>Your mental health matters. We provide a safe space to connect with professionals and resources.</p>
+      <div class="hero-buttons">
+        <button class="btn-primary" onclick="openPopup('signup')">Get Started</button>
+        <button class="btn-secondary" onclick="scrollToSection('about')">Learn More</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <h2>Why Choose Us?</h2>
+    <p>Our mission is to provide accessible mental health support for everyone, anywhere.</p>
+  </section>
+
+  <!-- Resources Section -->
+  <section class="resources" id="resources">
+    <h2>Resources</h2>
+    <div class="resources-container">
+      <div class="card">
+        <i class="fas fa-book-open"></i>
+        <h3>Articles</h3>
+      </div>
+      <div class="card">
+        <i class="fas fa-podcast"></i>
+        <h3>Podcasts</h3>
+      </div>
+      <div class="card">
+        <i class="fas fa-video"></i>
+        <h3>Videos</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer id="contact">
+    <h2>Join Us on Your Journey to Mental Wellness</h2>
+    <button class="btn-primary" onclick="openPopup('signup')">Sign Up Now</button>
+    <p>© 2025 Mansiksukh. All rights reserved.</p>
+  </footer>
+
+  <!-- Popup Modal -->
+  <div id="popup" class="popup hidden">
+    <div class="popup-content glass">
+      <span class="close" onclick="closePopup()">×</span>
+      <h2 id="popup-title">Sign Up</h2>
+      <form id="popup-form">
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <input type="password" placeholder="Confirm Password" required>
+        <button type="submit" class="btn-primary">Submit</button>
+      </form>
+      <p class="switch-popup">Already have an account? <span onclick="switchPopup()">Sign In</span></p>
+    </div>
+  </div>
+
+  <!-- JavaScript File -->
+  <script src="script.js"></script>
+
+</body>
+</html>
