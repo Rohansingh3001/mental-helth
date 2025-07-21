@@ -125,10 +125,28 @@
     font-size: 1rem;
     transition: all 0.3s ease;
   }
+
+  .btn1-primary {
+    background: #F5A623;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    border-radius: 15px;
+    height: 50px;
+    width: 140px;
+    
+  }
   
   .btn-primary {
     background: #F5A623;
     color: white;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 15px;
+    height: 50px;
+    width: 115px;
+    cursor: pointer;
+
   }
   
   .btn-secondary {
